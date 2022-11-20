@@ -1,0 +1,47 @@
+module.exports = {
+    siteMetadata: {
+        title: `Юрист в Новороссийске`,
+        description: `Юридические услуги в Краснодарском крае и Новороссийске. Более 20 лет решения сложных юридических вопросов. `,
+        author: `@Kofeinich`,
+        siteUrl: `https://advocate-etalon.ru/`,
+    },
+    plugins: [
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/src/images`,
+            },
+        },
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `gatsby-starter-default`,
+                short_name: `starter`,
+                start_url: `/`,
+                background_color: `white`,
+                display: `minimal-ui`,
+                icon: `src/images/icon.png`,
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://advocate-etalon.ru',
+                sitemap: 'https://advocate-etalon.ru/sitemap/sitemap-0.xml',
+            }
+        },
+        {
+            resolve: '@chakra-ui/gatsby-plugin',
+            options: {
+                resetCSS: true,
+                isUsingColorMode: true,
+            },
+        },
+    ],
+}
