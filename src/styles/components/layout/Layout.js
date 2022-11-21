@@ -13,7 +13,7 @@ export const Layout = ({children}) => {
         >
             <Header />
             <Container>{children}</Container>
-            <Footer />
+            {/*<Footer />*/}
         </Flex>
     );
 }

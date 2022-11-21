@@ -8,6 +8,7 @@ import {
 import colorTheme from "../styles/theme";
 import {Switcher} from "../styles/components/switcher/Switcher";
 import {Layout} from "../styles/components/layout/Layout";
+import {Adverting} from "../styles/components/adverting/Adverting";
 
 const MainPage = () => {
     const {toggleColorMode} = useColorMode();
@@ -15,9 +16,9 @@ const MainPage = () => {
     return (
         <ThemeProvider resetCSS theme={colorTheme}>
             <ColorModeProvider>
-                <Layout>
-                    <Box h={'800px'}></Box>
-                </Layout>
+               <Layout>
+                   <Adverting/>
+               </Layout>
             </ColorModeProvider>
         </ThemeProvider>
     )

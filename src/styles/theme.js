@@ -1,12 +1,16 @@
 import {extendTheme} from "@chakra-ui/react"
 
 const config = {
-    initialColorMode: localStorage.getItem('chakra-ui-color-mode')||'dark',
+    initialColorMode: localStorage.getItem('chakra-ui-color-mode') || 'dark',
     useSystemColorMode: true,
 }
 const colorTheme = extendTheme({
     config,
-    mode : {
+    fonts: {
+        heading: `'Prata', serif`,
+        body: `'Jost', sans-serif`
+    },
+    mode: {
         light: {
             base: '#F7F5FB',
             primary: '#F06449',

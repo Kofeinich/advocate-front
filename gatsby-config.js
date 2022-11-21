@@ -30,6 +30,14 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+                rule: {
+                    include: /svg/
+                }
+            }
+        },
+        {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
                 host: 'https://advocate-etalon.ru',
