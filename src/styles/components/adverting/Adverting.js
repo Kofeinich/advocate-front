@@ -28,6 +28,7 @@ export const Adverting = () => {
     ]
 
     return <Flex
+        as={'section'}
         justify={'space-between'}
         flexDirection={isMobile ?'column' : 'raw'}
     >

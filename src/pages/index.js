@@ -9,6 +9,8 @@ import colorTheme from "../styles/theme";
 import {Switcher} from "../styles/components/switcher/Switcher";
 import {Layout} from "../styles/components/layout/Layout";
 import {Adverting} from "../styles/components/adverting/Adverting";
+import {Titles} from "../styles/components/titles/Titles";
+
 
 const MainPage = () => {
     const {toggleColorMode} = useColorMode();
@@ -18,6 +20,7 @@ const MainPage = () => {
             <ColorModeProvider>
                <Layout>
                    <Adverting/>
+                   <Titles/>
                </Layout>
             </ColorModeProvider>
         </ThemeProvider>
