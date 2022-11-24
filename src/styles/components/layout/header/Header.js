@@ -1,10 +1,11 @@
 import * as React from 'react'
 import {Box, Flex, Text, useColorMode, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import Logo from "../../../../svg/logo.svg" ;
-import {Switcher} from "../../switcher/Switcher";
+import {Contacts} from "./contacts/Contacts";
+import {Switcher} from "./switcher/Switcher";
 
 export const Header = () => {
-    const { colorMode } = useColorMode()
+    const {colorMode} = useColorMode()
     const [isMobile] = useMediaQuery("(max-width: 768px)")
 
     const bg = useColorModeValue('#F7F5FB', '#36382E')
@@ -27,46 +28,49 @@ export const Header = () => {
             <Flex
                 maxW={'1200px'}
                 justify={'space-between'}
-                alignItems={'center'}
             >
                 <Flex
                     justify={'left'}
+                    minW={'600px'}
+                    alignItems={'center'}
                 >
-                    <Box
+                    <Flex
+                        justify={'center'}
+                        alignItems={'center'}
                         p={'0 10px'}
                         w={'50px'}
-                        h={'31px'}
                     >
                         <Logo/>
-                    </Box>
-                    <Flex
-                        alignItems={'center'}
-                        justify={'space-between'}
-                    >
-                        <Text
-                            p={'0 30px'}
-                        >
-                            Моя практика
-                        </Text>
-                        <Text
-                            p={'0 30px'}
-                        >
-                            Моя практика
-                        </Text>
-                        <Text
-                            p={'0 30px'}
-                        >
-                            Оставить заявку
-                        </Text>
-                        <Text
-                            p={'0 30px'}
-                        >
-                            Контакты
-                        </Text>
                     </Flex>
+                    <Text
+                        p={'0 30px'}
+                    >
+                        Моя практика
+                    </Text>
+                    <Text
+                        p={'0 30px'}
+                    >
+                        Моя практика
+                    </Text>
+                    <Text
+                        p={'0 30px'}
+                    >
+                        Оставить заявку
+                    </Text>
+                    <Text
+                        p={'0 30px'}
+                    >
+                        Контакты
+                    </Text>
                 </Flex>
-                <Flex>
+                <Flex
+                    minW={'400px'}
+                    alignItems={'center'}
+                    justify={'right'}
+
+                >
                     <Switcher/>
+                    <Contacts/>
                 </Flex>
             </Flex>
 

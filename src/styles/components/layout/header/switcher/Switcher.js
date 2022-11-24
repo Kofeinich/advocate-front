@@ -1,7 +1,7 @@
 import {useColorModeValue, useColorMode, Box, Flex, useMediaQuery} from "@chakra-ui/react";
 import * as React from "react";
-import Sun from "../../../svg/sun.svg" ;
-import Moon from "../../../svg/moon.svg" ;
+import Sun from "../../../../../svg/sun.svg" ;
+import Moon from "../../../../../svg/moon.svg" ;
 
 export const Switcher = () => {
     const [isMobile] = useMediaQuery("(max-width: 768px)")

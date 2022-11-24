@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Юрист в Новороссийске`,
-        description: `Юридические услуги в Краснодарском крае и Новороссийске. Более 20 лет решения сложных юридических вопросов. `,
+        description: ``,
         author: `@Kofeinich`,
         siteUrl: `https://advocate-etalon.ru/`,
     },
