@@ -1,15 +1,13 @@
 import * as React from 'react'
-import {Box, Flex, Text, useColorMode, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
+import {Flex, useColorModeValue,} from "@chakra-ui/react";
 import Logo from "../../../../svg/logo.svg" ;
 import {Contacts} from "./contacts/Contacts";
 import {Switcher} from "./switcher/Switcher";
+import {Navs} from "./navs/Navs";
 
 export const Header = () => {
-    const {colorMode} = useColorMode()
-    const [isMobile] = useMediaQuery("(max-width: 768px)")
 
     const bg = useColorModeValue('#F7F5FB', '#36382E')
-    const color = useColorModeValue('#474747', '#F7F5FB')
 
     return (
         <Flex
@@ -26,10 +24,12 @@ export const Header = () => {
             p={'15px'}
         >
             <Flex
-                maxW={'1200px'}
+                w={'100%'}
+                maxW={'1400px'}
                 justify={'space-between'}
             >
                 <Flex
+                    as={'nav'}
                     justify={'left'}
                     minW={'600px'}
                     alignItems={'center'}
@@ -39,41 +39,29 @@ export const Header = () => {
                         alignItems={'center'}
                         p={'0 10px'}
                         w={'50px'}
+
                     >
                         <Logo/>
                     </Flex>
-                    <Text
-                        p={'0 30px'}
-                    >
-                        Моя практика
-                    </Text>
-                    <Text
-                        p={'0 30px'}
-                    >
-                        Моя практика
-                    </Text>
-                    <Text
-                        p={'0 30px'}
-                    >
-                        Оставить заявку
-                    </Text>
-                    <Text
-                        p={'0 30px'}
-                    >
-                        Контакты
-                    </Text>
+                    <Navs text={'Услуги'}/>
+                    <Navs text={'Моя практика'}/>
+                    <Navs text={'Оставить заявку'}/>
+                    <Navs text={'Контакты'}/>
                 </Flex>
                 <Flex
-                    minW={'400px'}
+                    minW={'300px'}
                     alignItems={'center'}
                     justify={'right'}
 
                 >
                     <Switcher/>
-                    <Contacts/>
+                    <Flex
+                        alignItems={'center'}
+                    >
+                        <Contacts/>
+                    </Flex>
                 </Flex>
             </Flex>
-
         </Flex>
     )
 }
