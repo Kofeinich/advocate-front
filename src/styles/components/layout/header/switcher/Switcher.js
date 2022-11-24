@@ -26,8 +26,8 @@ export const Switcher = () => {
                 ?
                 <>
                     <Box
-                        w={isMobile ? '12px' : '18px'}
-                        h={isMobile ? '12px' : '18px'}
+                        w={isMobile ? '15px' : '18px'}
+                        h={isMobile ? '15px' : '18px'}
                     >
                         <Moon/>
                     </Box>
