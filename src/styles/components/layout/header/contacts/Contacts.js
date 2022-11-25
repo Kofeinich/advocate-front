@@ -1,11 +1,12 @@
 import * as React from "react";
-import {Box, Flex, Text, useColorModeValue} from "@chakra-ui/react";
+import {Box, Flex, Text, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import Mail from "../../../../../svg/mail.svg";
 import WhatsApp from "../../../../../svg/whatsapp.svg";
 import Telegram from "../../../../../svg/telegram.svg" ;
 
 export const Contacts = () => {
     const color = useColorModeValue('#474747', '#F7F5FB')
+    const [isMobile] = useMediaQuery("(max-width: 1100px)")
 
 
     return <Flex
@@ -17,11 +18,15 @@ export const Contacts = () => {
         <Flex
             w={'100%'}
             alignItems={'center'}
+            justify={'center'}
         >
             <a href='tel:+79180675105'>
                 <Text
+                    textAlign={'center'}
                     color={color}
-                    fontFamily={'"Jost", sans-serif'}
+                    fontSize={isMobile ? '28px' : '16px'}
+                    lineHeight={isMobile ? '42px' :'24px'}
+                    fontFamily={isMobile ? '"Prata",serif': '"Jost", sans-serif'}
                     _hover={{
                         color: "#F06449"
                     }}
@@ -43,19 +48,19 @@ export const Contacts = () => {
             justify={'center'}
         >
             <Box
-                w={'24px'}
+                w={ isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
                 <WhatsApp/>
             </Box>
             <Box
-                w={'24px'}
+                w={isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
                 <Telegram/>
             </Box>
             <Box
-                w={'24px'}
+                w={isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
                 <Mail/>

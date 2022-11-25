@@ -1,7 +1,12 @@
 import React from 'react';
 import {
-    Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent,
-    DrawerCloseButton, Flex, Text, VStack, Button, Box, useColorModeValue, Heading,
+    DrawerBody,
+    DrawerOverlay,
+    DrawerContent,
+    Flex,
+    VStack,
+    useColorModeValue,
+    Heading,
 } from "@chakra-ui/react";
 import CloseButton from "../../../../../svg/orangecloseicon.svg" ;
 import {Contacts} from "../contacts/Contacts";
@@ -11,6 +16,7 @@ import {Navs} from "../navs/Navs";
 
 export const MobileHeader = ({click}) => {
     const bg = useColorModeValue('#F7F5FB', '#36382E')
+    const color = useColorModeValue('#474747', '#F7F5FB')
 
     return <Flex w={'100%'}>
         <DrawerOverlay/>
@@ -76,10 +82,11 @@ export const MobileHeader = ({click}) => {
                     fontFamily={'Prata'}
                     fontSize={'40px'}
                     fontWeight={400}
+                    color={color}
                 >
                     Меню
                 </Heading>
-                <VStack alignItems="left" spacing={2.5}>
+                <VStack mt={'20px'} alignItems="left" spacing={3.5}>
                     <Navs text={'Услуги'}/>
                     <Navs text={'Моя практика'}/>
                     <Navs text={'Оставить заявку'}/>
