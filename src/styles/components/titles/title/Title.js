@@ -21,6 +21,7 @@ export const Title = ({desc, text}) => {
             w={'100%'}
             maxW={'1120px'}
             flexDirection={'column'}
+            p={isMobile ? '0px' : '0 50px'}
         >
             <Flex
                 w={'100%'}

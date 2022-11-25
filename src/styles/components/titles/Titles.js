@@ -1,7 +1,8 @@
 import * as React from 'react'
-import {Box, Flex, Heading, Text} from "@chakra-ui/react";
+import {Box, Flex, Text} from "@chakra-ui/react";
 import {Title} from "./title/Title";
 import Arrow from "../../../svg/arrow.svg" ;
+import {HeadingStyled} from "../styled/HeadingStyled";
 
 export const Titles = () => {
 
@@ -29,12 +30,7 @@ export const Titles = () => {
         position={'relative'}
         top={'50px'}
     >
-        <Heading
-            as={'h2'}
-            textAlign={'left'}
-        >
-            Моя Практика
-        </Heading>
+        <HeadingStyled text={'Моя Практика'}/>
         {topTitles.map((item, index) =>
             <Title key={index} text={item.text} desc={item.desc}/>
         )}
