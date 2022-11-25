@@ -17,7 +17,7 @@ export const Adverting = () => {
         },
         {
             icon: <Success/>,
-            number: '>  20',
+            number: '>  93%',
             text: 'лет опыта'
         },
         {

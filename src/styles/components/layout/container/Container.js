@@ -1,8 +1,10 @@
 import * as React from 'react'
-import {Flex} from "@chakra-ui/react";
+import {Flex, useColorModeValue} from "@chakra-ui/react";
 
 
 export const Container = ({children}) => {
+    const color = useColorModeValue( '#F7F5FB', '#36382E')
+
     return (
         <Flex
             as={'main'}
@@ -14,6 +16,7 @@ export const Container = ({children}) => {
             left={0}
             top={'80px'}
             alignItems={'center'}
+            bg={color}
         >
             {children}
         </Flex>

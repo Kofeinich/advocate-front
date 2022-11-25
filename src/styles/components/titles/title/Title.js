@@ -1,12 +1,13 @@
 import * as React from 'react'
-import {Box, Flex, Heading, Text, useMediaQuery} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {useState} from "react";
-import CloseIcon from "../../../../svg/closeicon.svg" ;
-import PlusIcon from "../../../../svg/plusicon.svg" ;
+import {CloseIcon} from "../icons/CloseIcon";
+import {PlusIcon} from "../icons/PlusIcon";
 
 export const Title = ({desc, text}) => {
     const [isMobile] = useMediaQuery("(max-width: 768px)")
     const [isOpen, setIsOpen] = useState(false)
+    const color = useColorModeValue('#474747', '#F7F5FB')
 
     const clickHandler = () => {
         if (isOpen === true){
@@ -25,20 +26,22 @@ export const Title = ({desc, text}) => {
                 w={'100%'}
                 justify={'space-between'}
                 p={'10px 0px'}
-                borderBottom={'1px solid white'}
+                borderBottom={`1px solid ${color}`}
             >
                 <Heading
                     lineHeight={'30px'}
-                    fontSize={'20px'}
+                    fontSize={isMobile ?'16px' :'20px'}
                     fontWeight={'400'}
                     as={'h3'}
+                    fontFamily={`'Jost', sans-serif`}
+                    color={color}
                 >
                     {desc}
                 </Heading>
                 <Box
                     onClick={() => clickHandler()}
                 >
-                    {isOpen ? <CloseIcon/> : <PlusIcon/>}
+                    {isOpen ? <CloseIcon color={color}/> : <PlusIcon color={color}/>}
                 </Box>
             </Flex>
             <Flex
@@ -46,9 +49,11 @@ export const Title = ({desc, text}) => {
                 display={isOpen ? 'flex' : 'none'}
             >
                 <Text
+                    color={color}
                     p={isMobile ? '10px 0px' : '20px 80px 10px 80px'}
                     fontSize={'16px'}
                     lineHeight={'24px'}
+                    fontFamily={`'Jost', sans-serif`}
                 >
                     {text}
                 </Text>

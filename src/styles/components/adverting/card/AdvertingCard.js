@@ -1,7 +1,8 @@
 import * as React from 'react'
-import {Box, Flex, Text} from "@chakra-ui/react";
+import {Box, Flex, Text, useColorModeValue} from "@chakra-ui/react";
 
 export const AdvertingCard = ({icon, text, number}) => {
+    const color = useColorModeValue('#474747', '#F7F5FB')
     return (
         <Flex
             justify={ 'space-between'}
@@ -9,7 +10,7 @@ export const AdvertingCard = ({icon, text, number}) => {
             w={'230px'}
             h={'120px'}
             p={'16px'}
-            border={'1px solid white'}
+            border={`1px solid ${color}`}
             m={'15px'}
         >
             {icon}
@@ -17,6 +18,7 @@ export const AdvertingCard = ({icon, text, number}) => {
                 w={'140px'}
             >
                 <Text
+                    color={color}
                     fontSize={'40px'}
                     lineHeight={'60px'}
                     fontFamily={`'Prata', serif`}
@@ -24,6 +26,7 @@ export const AdvertingCard = ({icon, text, number}) => {
                     {number}
                 </Text>
                 <Text
+                    color={color}
                     fontSize={'20px'}
                     lineHeight={'30px'}
                     fontFamily={`'Jost', sans-serif`}
