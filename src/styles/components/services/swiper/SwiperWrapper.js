@@ -1,7 +1,7 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import * as React from "react";
 import {Box, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
-import {Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper';
+import {Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCards, Keyboard} from 'swiper';
 
 
 import 'swiper/css/navigation';
@@ -54,13 +54,19 @@ export const SwiperWrapper = () => {
             <Swiper
                 className={'my-slider'}
                 centeredSlides={true}
-                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, Keyboard]}
                 spaceBetween={0}
                 slidesPerView={numberOfSlides}
-                autoplay={true}
-                // navigation
-                // lazy={true}
-                speed={2000}
+                keyboard={{
+                    enabled: true,
+                }}
+                autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: true,
+                }}
+                onAutoplayPause={500}
+                lazy={true}
+                speed={800}
                 loop={true}
             >
                 {texts.map((item, index) =>
