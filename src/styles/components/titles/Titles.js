@@ -28,13 +28,14 @@ export const Titles = () => {
         w={'100%'}
         maxW={'1120px'}
         position={'relative'}
-        top={'50px'}
+        mt={'50px'}
     >
         <HeadingStyled text={'Моя Практика'}/>
         {topTitles.map((item, index) =>
             <Title key={index} text={item.text} desc={item.desc}/>
         )}
         <Flex
+            position={'relative'}
             mt={'60px'}
             w={'100%'}
             justify={'right'}

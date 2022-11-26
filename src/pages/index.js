@@ -8,6 +8,7 @@ import {Layout} from "../styles/components/layout/Layout";
 import {Adverting} from "../styles/components/adverting/Adverting";
 import {Titles} from "../styles/components/titles/Titles";
 import {Profile} from "../styles/components/profile/Profile";
+import {Services} from "../styles/components/services/Services";
 
 
 const MainPage = () => {
@@ -18,6 +19,7 @@ const MainPage = () => {
                <Layout>
                    <Profile/>
                    <Adverting/>
+                   <Services/>
                    <Titles/>
                </Layout>
             </ColorModeProvider>
