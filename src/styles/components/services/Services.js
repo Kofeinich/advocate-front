@@ -2,7 +2,7 @@ import * as React from 'react'
 import {Flex} from "@chakra-ui/react";
 import {HeadingStyled} from "../styled/HeadingStyled";
 import 'swiper/css';
-import {StyledSwiper} from "./swiper/Swiper";
+import {SwiperWrapper} from "./swiper/SwiperWrapper";
 
 
 export const Services = () => {
@@ -15,6 +15,6 @@ export const Services = () => {
         top={'30px'}
     >
         <HeadingStyled text={'Услуги'}/>
-        <StyledSwiper/>
+        <SwiperWrapper/>
     </Flex>
 }
