@@ -1,6 +1,6 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import * as React from "react";
-import {Box, useMediaQuery} from "@chakra-ui/react";
+import {Box, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper';
 
 
@@ -12,8 +12,8 @@ import {SwiperItem} from "./slide/SwiperItem";
 
 
 export const SwiperWrapper = () => {
-    const [isMobile] = useMediaQuery("(max-width: 768px)")
-    const [isTablet] = useMediaQuery("(max-width: 1150px)")
+    const [isMobile] = useMediaQuery("(max-width: 1050px)")
+    const color = useColorModeValue('#474747', '#F7F5FB')
 
     const texts = [
         {
@@ -34,24 +34,25 @@ export const SwiperWrapper = () => {
         }
     ]
 
-    let numberOfSlides
+
+    let numberOfSlides;
     if (isMobile) {
         numberOfSlides = 1
-    }
-    if (!isMobile && isTablet){
-        numberOfSlides = 2
-    }
-    if (!isTablet) {
+    } else {
         numberOfSlides = 3
     }
 
     return <Box
         w={'100%'}
         maxW={'1120px'}
+        m={'70px 0px'}
         position={'relative'}
+        borderTop={`1px solid ${color}`}
+        borderBottom={`1px solid ${color}`}
     >
         {texts.length > 0 ?
             <Swiper
+                className={'my-slider'}
                 centeredSlides={true}
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 spaceBetween={0}
@@ -63,8 +64,8 @@ export const SwiperWrapper = () => {
                 loop={true}
             >
                 {texts.map((item, index) =>
-                    <SwiperSlide className={'my-slide'}>
-                        <SwiperItem key={index} text={item.text} title={item.title}/>
+                    <SwiperSlide key={index} className={'my-slide'}>
+                        <SwiperItem text={item.text} title={item.title}/>
                     </SwiperSlide>
                 )}
             </Swiper>

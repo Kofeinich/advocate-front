@@ -30,7 +30,7 @@ export const Adverting = () => {
     return <Flex
         as={'section'}
         position={'relative'}
-        mt={'50px'}
+        mt={'30px'}
         justify={'space-between'}
         flexDirection={isMobile ?'column' : 'raw'}
     >

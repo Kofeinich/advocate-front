@@ -7,11 +7,32 @@ export const SwiperItem = ({title, text}) => {
     const color = useColorModeValue('#474747', '#F7F5FB')
 
     return <Box
-        w={'294px'}
-        h={'264px'}
-        m={'30px 0 0 0'}
-        // p={'12px'}
+        position={'relative'}
+        w={'274px'}
+        h={'184px'}
+        top={'0'}
+        m={'0'}
+        borderRight={`1px solid ${color} `}
+        borderLeft={`1px solid ${color} `}
     >
+        {/*<Box*/}
+        {/*    zIndex={1000000}*/}
+        {/*    position={'absolute'}*/}
+        {/*    top={'-50px'}*/}
+        {/*    right={'-50.5px'}*/}
+        {/*    h={'274px'}*/}
+        {/*    w={'1px'}*/}
+        {/*    bg={color}*/}
+        {/*/>*/}
+        {/*<Box*/}
+        {/*    zIndex={1000000}*/}
+        {/*    position={'absolute'}*/}
+        {/*    top={'-50px'}*/}
+        {/*    left={'-50.5px'}*/}
+        {/*    h={'274px'}*/}
+        {/*    w={'1px'}*/}
+        {/*    bg={color}*/}
+        {/*/>*/}
         <Heading
             textAlign={'center'}
             as={'h3'}
@@ -30,8 +51,7 @@ export const SwiperItem = ({title, text}) => {
             fontWeight={'400'}
             fontFamily={`'Jost', sans-serif`}
             color={color}
-            pt={'10px'}
-
+            p={'10px '}
         >
             {text}
         </Text>
