@@ -1,6 +1,7 @@
 import {Flex, Heading, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
 import {StaticImage} from "gatsby-plugin-image";
 import * as React from 'react'
+import {ButtonStyled} from "../styled/ButtonStyled";
 
 
 export const Profile = () => {
@@ -9,8 +10,8 @@ export const Profile = () => {
 
     return <Flex
         as={'section'}
-        justify={isMobile ? 'center' :'space-between'}
-        flexDirection={isMobile ? 'column' :'row'}
+        justify={isMobile ? 'center' : 'space-between'}
+        flexDirection={isMobile ? 'column' : 'row'}
         position={'relative'}
         alignItems={'center'}
         maxW={'1100px'}
@@ -44,20 +45,37 @@ export const Profile = () => {
                 color={color}
                 fontFamily={`'Jost', sans-serif`}
                 fontWeight={'400'}
-                fontSize={isMobile ?'18px' :'20px'}
+                fontSize={isMobile ? '18px' : '20px'}
             >
-                юридическая помощь в судебных спорах, арбитражных судах, общей юрисдикции, юридическом сопровождении бизнеса и защите прав граждан в суде
+                юридическая помощь в судебных спорах, арбитражных судах, общей юрисдикции, юридическом сопровождении
+                бизнеса и защите прав граждан в суде
             </Text>
+            {
+                isMobile
+                    ?
+                    <></>
+                    :
+                    <Flex
+                        alignItems={'center'}
+                        justify={'center'}
+                    >
+                        <ButtonStyled text={'Оставить заявку'}/>
+                    </Flex>
+            }
         </VStack>
         <Flex
+            position={'relative'}
             overflow={'hidden'}
             pl={isMobile ? '0' : '20px'}
-            pt={isMobile ? '40px' : '0'}
+            pt={isMobile ? '20px' : '0'}
             w={'100%'}
-            maxW={isMobile ? '220px': '380px'}
+            maxW={isMobile ? '220px' : '380px'}
             minW={'200px'}
+            flexDirection={'column'}
+            alignItems={'center'}
         >
             <StaticImage
+                style={{marginBottom: '20px'}}
                 placeholder={'blurred'}
                 src={`../../../images/profile.jpeg`}
                 alt={''}
@@ -65,6 +83,13 @@ export const Profile = () => {
                 quality={100}
             >
             </StaticImage>
+            {
+                isMobile
+                    ?
+                    <ButtonStyled text={'Оставить заявку'}/>
+                    :
+                    <></>
+            }
         </Flex>
     </Flex>
 }
