@@ -25,7 +25,15 @@ export const PracticeHeader = () => {
             justify={'left'}
             alignItems={'center'}
         >
-            <Logo/>
+            <Flex
+                justify={'center'}
+                alignItems={'center'}
+                p={'0 10px'}
+                w={'50px'}
+
+            >
+                <Logo/>
+            </Flex>
             <Link to='/'>
                 <Button
                     borderRadius={'none'}
