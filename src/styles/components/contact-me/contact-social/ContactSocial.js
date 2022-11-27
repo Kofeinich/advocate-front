@@ -1,4 +1,4 @@
-import {Flex, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, Flex, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
 import * as React from "react";
 
 import {Current} from "../../../icons/Current";
@@ -71,7 +71,7 @@ export const ContactSocial = () => {
             </Text>
         </Flex>
         <Flex
-            justify={'left'}
+            justify={isMobile ? 'center' :'left'}
             alignItems={'center'}
         >
             <WhatsApp width={'32px'} margin={'0px 20px 0px 0px'}/>

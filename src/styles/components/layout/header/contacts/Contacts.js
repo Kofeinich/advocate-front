@@ -1,8 +1,8 @@
 import * as React from "react";
 import {Box, Flex, Text, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
-import Mail from "../../../../../svg/mail.svg";
-import WhatsApp from "../../../../../svg/whatsapp.svg";
-import Telegram from "../../../../../svg/telegram.svg" ;
+import {WhatsApp} from "../../../../icons/WhatsApp";
+import {Telegram} from "../../../../icons/Telegram";
+import {Mail} from "../../../../icons/Mail";
 
 export const Contacts = () => {
     const color = useColorModeValue('#474747', '#F7F5FB')
@@ -51,19 +51,19 @@ export const Contacts = () => {
                 w={ isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
-                <WhatsApp/>
+               <WhatsApp width={'100%'} margin={'0'}/>
             </Box>
             <Box
                 w={isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
-                <Telegram/>
+                <Telegram width={'100%'} margin={'0'}/>
             </Box>
             <Box
                 w={isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
-                <Mail/>
+                <Mail  width={'100%'} margin={'0'}/>
             </Box>
         </Flex>
 

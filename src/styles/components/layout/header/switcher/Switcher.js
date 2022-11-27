@@ -11,6 +11,9 @@ export const Switcher = () => {
 
 
     return <Flex
+        _hover={{
+            cursor: 'pointer'
+        }}
         borderRadius={'20px'}
         border={`1px solid ${borderColor}`}
         bg={'#F7F5FB'}

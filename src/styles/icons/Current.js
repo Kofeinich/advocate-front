@@ -9,15 +9,15 @@ export const Current = ({width, margin}) => {
     return <Box
         w={width}
         m={margin}
-        _hover={{
-            cursor: 'pointer'
-        }}
-        onMouseOver={(target) => {
-            setItemColor(itemHoverColor)
-        }}
-        onMouseLeave={() => {
-            setItemColor(itemStaticColor)
-        }}
+        // _hover={{
+        //     cursor: 'pointer'
+        // }}
+        // onMouseOver={(target) => {
+        //     setItemColor(itemHoverColor)
+        // }}
+        // onMouseLeave={() => {
+        //     setItemColor(itemStaticColor)
+        // }}
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"

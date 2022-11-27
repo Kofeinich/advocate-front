@@ -20,7 +20,7 @@ export const Header = () => {
             position={'fixed'}
             top={0}
             left={0}
-            zIndex={1000}
+            zIndex={2000}
             bg={bg}
             justify={'center'}
             alignItems={'center'}
