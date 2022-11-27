@@ -4,6 +4,7 @@ import {Title} from "./title/Title";
 import Arrow from "../../../svg/arrow.svg" ;
 import {HeadingStyled} from "../styled/HeadingStyled";
 import {ArrowRight} from "../../icons/ArrowRight";
+import {Link} from "gatsby";
 
 export const Titles = () => {
 
@@ -42,15 +43,19 @@ export const Titles = () => {
             justify={'right'}
             pr={'50px'}
         >
-            <Text
-                _hover={{
-                    cursor: 'pointer',
-                    color: '#F06449'
-                }}
-            >
-                Читать все кейсы
-            </Text>
-            <ArrowRight width={'45px'} margin={'0px 0px 0px 20px'}/>
+            <Link to='/practice'>
+                <Text
+                    _hover={{
+                        cursor: 'pointer',
+                        color: '#F06449'
+                    }}
+                >
+                    Читать больше
+                </Text>
+            </Link>
+            <Link to='/practice'>
+                <ArrowRight width={'45px'} margin={'0px 0px 0px 20px'}/>
+            </Link>
         </Flex>
     </Flex>
 }

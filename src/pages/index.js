@@ -17,7 +17,7 @@ const MainPage = () => {
     return (
         <ThemeProvider resetCSS theme={colorTheme}>
             <ColorModeProvider>
-               <Layout>
+               <Layout isMain={true}>
                    <Profile/>
                    <Adverting/>
                    <Services/>
