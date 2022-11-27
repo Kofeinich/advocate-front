@@ -4,6 +4,7 @@ import {useState} from "react";
 import {CloseIcon} from "../icons/CloseIcon";
 import {PlusIcon} from "../icons/PlusIcon";
 
+
 export const Title = ({desc, text}) => {
     const [isMobile] = useMediaQuery("(max-width: 768px)")
     const [isOpen, setIsOpen] = useState(false)
@@ -42,7 +43,7 @@ export const Title = ({desc, text}) => {
                 <Box
                     onClick={() => clickHandler()}
                 >
-                    {isOpen ? <CloseIcon color={color}/> : <PlusIcon color={color}/>}
+                    {isOpen ? <CloseIcon width={'43px'}/> : <PlusIcon width={'30px'}/>}
                 </Box>
             </Flex>
             <Flex

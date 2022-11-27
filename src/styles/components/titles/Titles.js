@@ -3,6 +3,7 @@ import {Box, Flex, Text} from "@chakra-ui/react";
 import {Title} from "./title/Title";
 import Arrow from "../../../svg/arrow.svg" ;
 import {HeadingStyled} from "../styled/HeadingStyled";
+import {ArrowRight} from "../../icons/ArrowRight";
 
 export const Titles = () => {
 
@@ -41,14 +42,15 @@ export const Titles = () => {
             justify={'right'}
             pr={'50px'}
         >
-            <Text>
+            <Text
+                _hover={{
+                    cursor: 'pointer',
+                    color: '#F06449'
+                }}
+            >
                 Читать все кейсы
             </Text>
-            <Box
-                ml={'20px'}
-            >
-                <Arrow/>
-            </Box>
+            <ArrowRight width={'45px'} margin={'0px 0px 0px 20px'}/>
         </Flex>
     </Flex>
 }
