@@ -1,11 +1,12 @@
-import {Box, Flex, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Flex, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
 import * as React from "react";
-import Mail from "../../../../svg/mail.svg";
-import WhatsApp from "../../../../svg/whatsapp.svg";
-import Telegram from "../../../../svg/telegram.svg" ;
-import Current from "../../../../svg/current.svg";
-import Data from "../../../../svg/data.svg";
-import Phone from "../../../../svg/phone.svg";
+
+import {Current} from "../../../icons/Current";
+import {Data} from "../../../icons/Data";
+import {Phone} from "../../../icons/Phone";
+import {Telegram} from "../../../icons/Telegram";
+import {WhatsApp} from "../../../icons/WhatsApp";
+import {Mail} from "../../../icons/Mail";
 
 export const ContactSocial = () => {
     const [isMobile] = useMediaQuery("(max-width: 1000px)")
@@ -13,25 +14,22 @@ export const ContactSocial = () => {
 
     return <VStack
         w={'100%'}
-        alignItems={isMobile ? 'center':'space-between'}
+        alignItems={isMobile ? 'center' : 'space-between'}
         spacing={7}
     >
         <Flex
             w={'100%'}
             alignItems={'center'}
         >
-            <Box
-                w={'23px'}
-            >
-                <Phone/>
-            </Box>
+            <Phone width={'23px'} margin={'0'}/>
             <Text
                 pl={'18px'}
                 color={color}
                 fontSize={'16px'}
                 fontFamily={'"Jost", sans-serif'}
                 _hover={{
-                    color: "#F06449"
+                    color: "#F06449",
+                    cursor: 'pointer'
                 }}
                 _active={{
                     color: "#F06449"
@@ -47,11 +45,7 @@ export const ContactSocial = () => {
             w={'100%'}
             alignItems={'center'}
         >
-            <Box
-                w={'17px'}
-            >
-                <Current/>
-            </Box>
+            <Current width={'17px'} margin={'0'}/>
             <Text
                 pl={'26px'}
                 color={color}
@@ -66,11 +60,7 @@ export const ContactSocial = () => {
             w={'100%'}
             alignItems={'center'}
         >
-            <Box
-                w={'21px'}
-            >
-                <Data/>
-            </Box>
+            <Data width={'21px'} margin={'0'}/>
             <Text
                 pl={'20px'}
                 color={color}
@@ -84,24 +74,9 @@ export const ContactSocial = () => {
             justify={'left'}
             alignItems={'center'}
         >
-            <Box
-                mr={'20px'}
-                w={'32px'}
-            >
-                <WhatsApp/>
-            </Box>
-            <Box
-                mr={'20px'}
-                w={'32px'}
-            >
-                <Telegram/>
-            </Box>
-            <Box
-                mr={'20px'}
-                w={'32px'}
-            >
-                <Mail/>
-            </Box>
+            <WhatsApp width={'32px'} margin={'0px 20px 0px 0px'}/>
+            <Telegram width={'32px'} margin={'0px 20px 0px 0px'}/>
+            <Mail width={'32px'} margin={'0px 20px 0px 0px'}/>
         </Flex>
     </VStack>
 }
