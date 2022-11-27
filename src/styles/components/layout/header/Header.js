@@ -20,7 +20,7 @@ export const Header = () => {
             position={'fixed'}
             top={0}
             left={0}
-            zIndex={2000}
+            zIndex={1000}
             bg={bg}
             justify={'center'}
             alignItems={'center'}
@@ -71,7 +71,7 @@ export const Header = () => {
                             onClose={onClose}
                             finalFocusRef={btnRef}
                         >
-                            <MobileHeader click={onClose}/>
+                            <MobileHeader onClose={onClose}/>
                         </Drawer>
                     </Flex>
                     :

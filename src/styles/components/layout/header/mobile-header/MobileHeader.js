@@ -14,7 +14,7 @@ import Logo from "../../../../../svg/logo.svg";
 import {Switcher} from "../switcher/Switcher";
 import {Navs} from "../navs/Navs";
 
-export const MobileHeader = ({click}) => {
+export const MobileHeader = ({onClose}) => {
     const bg = useColorModeValue('#F7F5FB', '#36382E')
     const color = useColorModeValue('#474747', '#F7F5FB')
 
@@ -62,7 +62,7 @@ export const MobileHeader = ({click}) => {
                             justify={'center'}
                             alignItems={'center'}
                             w={'43px'}
-                            onClick={click}
+                            onClick={onClose}
                         >
                             <CloseButton/>
                         </Flex>
