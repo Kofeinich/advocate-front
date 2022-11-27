@@ -39,6 +39,7 @@ export const Titles = () => {
             mt={'60px'}
             w={'100%'}
             justify={'right'}
+            pr={'50px'}
         >
             <Text>
                 Читать все кейсы

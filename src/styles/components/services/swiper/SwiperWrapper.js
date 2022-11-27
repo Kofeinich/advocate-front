@@ -1,7 +1,7 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import * as React from "react";
 import {Box, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
-import {Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCards, Keyboard} from 'swiper';
+import {Navigation, Pagination, Scrollbar, A11y, Autoplay, Keyboard} from 'swiper';
 
 
 import 'swiper/css/navigation';
@@ -64,7 +64,6 @@ export const SwiperWrapper = () => {
                     delay: 3500,
                     disableOnInteraction: true,
                 }}
-                onAutoplayPause={500}
                 lazy={true}
                 speed={800}
                 loop={true}

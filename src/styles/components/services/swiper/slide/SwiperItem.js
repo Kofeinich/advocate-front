@@ -1,5 +1,4 @@
-import {Box, Flex, Heading, Text, useColorModeValue} from "@chakra-ui/react";
-import {SwiperSlide} from "swiper/react";
+import {Box, Heading, Text, useColorModeValue} from "@chakra-ui/react";
 import * as React from "react";
 
 
