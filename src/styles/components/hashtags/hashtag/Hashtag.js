@@ -1,30 +1,31 @@
 import * as React from 'react'
 import {useState} from "react";
-import {Flex, Text, useColorMode, useColorModeValue} from "@chakra-ui/react";
+import {Flex, Text, useColorMode, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {useEffect} from "react";
 
-
-export const Hashtag = ({text}) => {
+export const Hashtag = ({tag, onChangeStatus}) => {
     const color = useColorModeValue('#474747', '#F7F5FB')
+    const [isMobile] = useMediaQuery("(max-width: 440px)")
     const itemActiveColor = '#F06449'
     const [itemColor, setItemColor] = useState(color)
-    const [isActive, setIsActive] = useState(0)
+
+
     useEffect(() => {
         setItemColor(color)
     },[useColorMode()])
 
-    const handler = () => {
-        setIsActive((isActive + 1) % 2);
-        (isActive === 0) ? setItemColor(itemActiveColor) : setItemColor(color)
-    }
+    // const handler = () => {
+    //     onChangeStatus(tag)
+    //     (tag.isActive === 0) ? setItemColor(itemActiveColor) : setItemColor(color)
+    // }
 
     return <Flex
         alignItems={'center'}
-        m={'10px'}
+        m={isMobile ? '2px' : '10px'}
         p={'5px'}
         h={'40px'}
         border={`1px solid ${itemColor}`}
-        onClick={() => handler()}
+        onClick={() => onChangeStatus(tag.id)}
         _hover={{
             cursor: 'pointer'
         }}
@@ -35,7 +36,7 @@ export const Hashtag = ({text}) => {
             fontSize={'16px'}
             color={itemColor}
         >
-            #{text}
+            #{tag.text}
         </Text>
     </Flex>
 }

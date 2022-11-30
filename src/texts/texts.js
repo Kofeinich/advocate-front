@@ -82,47 +82,74 @@ export const texts = {
             },
         ]
     },
-    practice: [
-        {
-            id: [
-                "arb",
-                "vzs",
-            ],
-            title: "Взыскание задолженности по договору поставки",
-            description: "",
-        },
-        {
-            id: [
-                "arb",
-                "vzs",
-            ],
-            title: "Раздел общего имущества супругов",
-            description: "",
-        },
-        {
-            id: [
-                "arb",
-                "vzs",
-            ],
-            title: "Определение долей супругов в общем имуществе и его разделе",
-            description: "",
-        },
-        {
-            id: [
-                "arb",
-                "vzs",
-            ],
-            title: "Взыскание задолженности по договору поставки",
-            description: "",
-        },
-        {
-            id: [
-                "arb",
-                "vzs",
-            ],
-            title: "Взыскание задолженности по договору поставки",
-            description: "",
-        },
+    practice: {
 
-    ],
+        hashTagsList : [
+            {
+              id: "arb",
+              text: "арбитраж",
+              isActive: false,
+            },
+            {
+                id: "sem",
+                text: "семейные_споры",
+                isActive: false,
+            },
+            {
+                id: "nas",
+                text: "наследство",
+                isActive: false,
+            },
+            {
+                id: "raz",
+                text: "раздел_имущества",
+                isActive: false,
+            },
+            {
+                id: "ned",
+                text: "недвижимость",
+                isActive: false,
+            },
+            {
+                id: "vzs",
+                text: "взыскание_долгов",
+                isActive: false,
+            },
+            {
+                id: "rvd",
+                text: "разводы",
+                isActive: false,
+            },
+        ],
+
+        description: "",
+        titles : [
+            {
+                id: [
+                    "arb",
+                    "vzs",
+                ],
+                description: "Взыскание задолженности по договору поставки",
+                title: "govno",
+            },
+            {
+                id: [
+                    "arb",
+                    "vzs",
+                ],
+                description: "Раздел общего имущества супругов",
+                title: "mocha",
+            },
+            {
+                id: [
+                    "arb",
+                    "vzs",
+                    "sem"
+                ],
+                description: "Определение долей супругов в общем имуществе и его разделе",
+                title: "zalupa",
+            },
+
+        ],
+    }
 }
