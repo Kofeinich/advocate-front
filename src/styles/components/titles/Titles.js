@@ -1,7 +1,6 @@
 import * as React from 'react'
-import {Box, Flex, Text} from "@chakra-ui/react";
+import {Flex, Text} from "@chakra-ui/react";
 import {Title} from "./title/Title";
-import Arrow from "../../../svg/arrow.svg" ;
 import {HeadingStyled} from "../styled/HeadingStyled";
 import {ArrowRight} from "../../icons/ArrowRight";
 import {Link} from "gatsby";

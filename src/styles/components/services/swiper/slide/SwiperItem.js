@@ -1,15 +1,16 @@
-import {Box, Flex, Heading, Text, useColorModeValue} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import * as React from "react";
 
 
 export const SwiperItem = ({service}) => {
+    const [isMobile] = useMediaQuery("(max-width: 1050px)")
     const color = useColorModeValue('#474747', '#F7F5FB')
     const headingColor = useColorModeValue('#F06449', '#FFC759')
 
     return <Box
         position={'relative'}
         w={'274px'}
-        h={'184px'}
+        h={isMobile ? '' : '184px'}
         top={'0'}
         m={'0'}
         borderRight={`1px solid ${color} `}
