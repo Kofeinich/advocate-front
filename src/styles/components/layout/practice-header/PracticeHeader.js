@@ -48,6 +48,7 @@ export const PracticeHeader = () => {
                     fontFamily={`'Jost', sans-serif`}
                     fontWeight={400}
                     fontSize={'16px'}
+                    lineHeight={'20px'}
                     _hover={{
                         cursor: 'pointer',
                         bg: "#F06449"

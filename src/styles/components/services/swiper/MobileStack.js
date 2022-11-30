@@ -1,4 +1,4 @@
-import {Flex, useColorModeValue, VStack} from "@chakra-ui/react";
+import { useColorModeValue, VStack} from "@chakra-ui/react";
 import {texts} from "../../../../texts/texts";
 import {SwiperItem} from "./slide/SwiperItem";
 import * as React from "react";

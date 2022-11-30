@@ -29,7 +29,7 @@ export const SwiperItem = ({service}) => {
         </Heading>
 
         <Box
-            p={'0px 10px'}
+            p={ isMobile ?'0px 10px 10px 10px' : "0px 10px"}
         >
             {
                 service.services.map((item, index) =>

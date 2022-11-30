@@ -28,7 +28,7 @@ export const Title = ({desc, text}) => {
                 w={'100%'}
                 justify={'space-between'}
                 p={'10px 0px'}
-                borderBottom={`1px solid ${color}`}
+                borderBottom={isOpen ? 'none' : `1px solid ${color}`}
             >
                 <Heading
                     lineHeight={'30px'}
@@ -49,10 +49,11 @@ export const Title = ({desc, text}) => {
             <Flex
                 w={'100%'}
                 display={isOpen ? 'flex' : 'none'}
+                borderBottom={isOpen ? `1px solid ${color}` : 'none'}
             >
                 <Text
                     color={color}
-                    p={isMobile ? '10px 0px' : '20px 80px 10px 80px'}
+                    p={isMobile ? '10px 0px' : '0px 80px 10px 80px'}
                     fontSize={'16px'}
                     lineHeight={'24px'}
                     fontFamily={`'Jost', sans-serif`}

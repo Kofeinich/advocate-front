@@ -53,7 +53,7 @@ export const SwiperWrapper = () => {
             >
                 {texts.main.service.map((item, index) =>
                     <SwiperSlide key={index} className={'my-slide'}>
-                        <SwiperItem service={item}/>
+                        <SwiperItem key={index} service={item}/>
                     </SwiperSlide>
                 )}
             </Swiper>
