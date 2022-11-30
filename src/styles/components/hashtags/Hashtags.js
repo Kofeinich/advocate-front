@@ -62,7 +62,7 @@ export const Hashtags = () => {
                     flexWrap={'wrap'}
                 >
                     {hashTags.map((item, index) =>
-                        <Hashtag key={item.tag} tag={item} onChangeStatus={handlerTagActive}/>
+                        <Hashtag key={item.tag} tag={item} variant={1} onChangeStatus={handlerTagActive}/>
                     )}
                 </Flex>
             </Flex>
@@ -78,7 +78,7 @@ export const Hashtags = () => {
             {hashTags.filter((item) => {
                  if (item.isActive) { return item}
             }).map((item, index) =>
-                <Hashtag key={item.tag} tag={item} onChangeStatus={handlerTagActive}/>
+                <Hashtag key={item.tag} tag={item} variant={2} onChangeStatus={handlerTagActive}/>
             )}
         </Flex>
         <PracticeTitles/>
