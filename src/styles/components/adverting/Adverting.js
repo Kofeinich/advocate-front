@@ -4,6 +4,7 @@ import Success from "../../../svg/success.svg";
 import Glare from "../../../svg/glare.svg"
 import {AdvertingCard} from "./card/AdvertingCard";
 import {Flex, useMediaQuery} from "@chakra-ui/react";
+import {texts} from "../../../texts/texts"
 
 
 export const Adverting = () => {
@@ -12,18 +13,18 @@ export const Adverting = () => {
     const cards = [
         {
             icon: <Calendar/>,
-            number: '>  20',
-            text: 'лет опыта'
-        },
-        {
-            icon: <Success/>,
-            number: '>  93%',
-            text: 'лет опыта'
+            number: texts.main.cards[0].number,
+            text: texts.main.cards[0].text
         },
         {
             icon: <Glare/>,
-            number: '>  20',
-            text: 'лет опыта'
+            number: texts.main.cards[2].number,
+            text: texts.main.cards[2].text
+        },
+        {
+            icon: <Success/>,
+            number: texts.main.cards[1].number,
+            text: texts.main.cards[1].text
         },
     ]
 

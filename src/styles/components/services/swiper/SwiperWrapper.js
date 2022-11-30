@@ -9,31 +9,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "../swiper/swiper.css"
 import {SwiperItem} from "./slide/SwiperItem";
+import {texts} from "../../../../texts/texts"
 
 
 export const SwiperWrapper = () => {
     const [isMobile] = useMediaQuery("(max-width: 1050px)")
     const color = useColorModeValue('#474747', '#F7F5FB')
-
-    const texts = [
-        {
-            title: "Арбитражные дела",
-            text: "Возмещение убытков, неисполнение обязательств по договору, заключение, расторжение, отказ от договора и т.д.",
-        },
-        {
-            title: "Семейные споры",
-            text: "Расторжение брака, оспаривание отцовства, составление брачного договора, выделение супружеской доли и т.д.",
-        },
-        {
-            title: "Раздел имущества",
-            text: "небольшой текст где кратко и понятно об этих делах, но я пожалуй тут еще напишу че нибудь",
-        },
-        {
-            title: "Раздел имущества 2",
-            text: "fffffffнебольшой текст где кратко и понятно об этих делах, но я пожалуй тут еще напишу че нибудь",
-        }
-    ]
-
 
     let numberOfSlides;
     if (isMobile) {
@@ -41,6 +22,8 @@ export const SwiperWrapper = () => {
     } else {
         numberOfSlides = 3
     }
+
+
 
     return <Box
         w={'100%'}
@@ -50,7 +33,7 @@ export const SwiperWrapper = () => {
         borderTop={`1px solid ${color}`}
         borderBottom={`1px solid ${color}`}
     >
-        {texts.length > 0 ?
+        {texts.main.service.length > 0 ?
             <Swiper
                 className={'my-slider'}
                 centeredSlides={true}
@@ -68,9 +51,9 @@ export const SwiperWrapper = () => {
                 speed={800}
                 loop={true}
             >
-                {texts.map((item, index) =>
+                {texts.main.service.map((item, index) =>
                     <SwiperSlide key={index} className={'my-slide'}>
-                        <SwiperItem text={item.text} title={item.title}/>
+                        <SwiperItem service={item}/>
                     </SwiperSlide>
                 )}
             </Swiper>

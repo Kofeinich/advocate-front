@@ -5,9 +5,9 @@ export const AdvertingCard = ({icon, text, number}) => {
     const color = useColorModeValue('#474747', '#F7F5FB')
     return (
         <Flex
-            justify={ 'space-between'}
+            justify={ 'left'}
             alignItems={'center'}
-            w={'230px'}
+            w={'280px'}
             h={'120px'}
             p={'16px'}
             border={`1px solid ${color}`}
@@ -15,10 +15,12 @@ export const AdvertingCard = ({icon, text, number}) => {
         >
             {icon}
             <Box
-                w={'140px'}
+                ml={'15px'}
+                w={'100%'}
             >
                 <Text
-                    color={color}
+                    textAlign={'center'}
+                    color={'#F06449'}
                     fontSize={'40px'}
                     lineHeight={'60px'}
                     fontFamily={`'Prata', serif`}
@@ -26,8 +28,9 @@ export const AdvertingCard = ({icon, text, number}) => {
                     {number}
                 </Text>
                 <Text
+                    textAlign={'center'}
                     color={color}
-                    fontSize={'20px'}
+                    fontSize={'16px'}
                     lineHeight={'30px'}
                     fontFamily={`'Jost', sans-serif`}
                 >
