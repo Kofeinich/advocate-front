@@ -84,11 +84,11 @@ export const texts = {
     },
     practice: {
 
-        hashTagsList : [
+        hashTagsList: [
             {
-              id: "arb",
-              text: "арбитраж",
-              isActive: false,
+                id: "arb",
+                text: "арбитраж",
+                isActive: false,
             },
             {
                 id: "sem",
@@ -123,31 +123,32 @@ export const texts = {
         ],
 
         description: "",
-        titles : [
+        titles: [
             {
+                uniqueId : 'VYUIMUDO',
                 id: [
                     "arb",
-                    "vzs",
                 ],
                 description: "Взыскание задолженности по договору поставки",
-                title: "govno",
+                title: "Только арбитраж",
             },
             {
+                uniqueId : 'YBDUJMLL',
                 id: [
-                    "arb",
                     "vzs",
                 ],
                 description: "Раздел общего имущества супругов",
-                title: "mocha",
+                title: "Только Взыскание",
             },
             {
+                uniqueId : 'KIMIDLJT',
                 id: [
                     "arb",
                     "vzs",
                     "sem"
                 ],
                 description: "Определение долей супругов в общем имуществе и его разделе",
-                title: "zalupa",
+                title: "И то и то",
             },
 
         ],

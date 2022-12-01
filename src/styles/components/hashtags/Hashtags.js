@@ -5,6 +5,7 @@ import {Strokes} from "./strokes/Strokes";
 import {PracticeTitles} from "../titles/practice-titles/PracticeTitles";
 import {useState} from "react";
 import {texts} from "../../../texts/texts"
+import {Title} from "../titles/title/Title";
 
 
 export const Hashtags = () => {
@@ -12,8 +13,6 @@ export const Hashtags = () => {
     const [isMobile] = useMediaQuery("(max-width: 440px)")
 
     const [hashTags, setHashTags] = useState(texts.practice.hashTagsList)
-
-    console.log(hashTags)
 
     const handlerTagActive = (fromTag) => {
         setHashTags(hashTags.map((tag, index) => {
@@ -23,7 +22,6 @@ export const Hashtags = () => {
                     isActive: !tag.isActive,
                 }
             }
-            console.log(hashTags)
             return tag
         }))
     }
@@ -68,6 +66,7 @@ export const Hashtags = () => {
             </Flex>
         </Flex>
         <Flex
+            as={'section'}
             position={'relative'}
             justify={'center'}
             alignItems={'center'}
@@ -81,6 +80,6 @@ export const Hashtags = () => {
                 <Hashtag key={item.tag} tag={item} variant={2} onChangeStatus={handlerTagActive}/>
             )}
         </Flex>
-        <PracticeTitles/>
+        <PracticeTitles tags={hashTags}/>
     </Flex>
 }
