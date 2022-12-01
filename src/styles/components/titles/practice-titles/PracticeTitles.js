@@ -34,6 +34,7 @@ export const PracticeTitles = ({tags}) => {
         maxW={'1120px'}
         position={'relative'}
         mt={'50px'}
+        mb={'50px'}
     >
         {listOfActiveItems.map((item, index) =>
             <Title key={index} instance={item}/>
