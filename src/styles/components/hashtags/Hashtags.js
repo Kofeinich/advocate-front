@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Flex, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
+import {Flex, Heading, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {Hashtag} from "./hashtag/Hashtag";
 import {Strokes} from "./strokes/Strokes";
 import {PracticeTitles} from "../titles/practice-titles/PracticeTitles";
@@ -67,13 +67,29 @@ export const Hashtags = () => {
         </Flex>
         <Flex
             as={'section'}
+            flexWrap={'wrap'}
             position={'relative'}
-            justify={'center'}
+            justify={'left'}
             alignItems={'center'}
             w={'100%'}
             maxW={'1200px'}
             p={'0px 10px'}
+            mt={'20px'}
         >
+            <Heading
+                fontWeight={'400'}
+                zIndex={100}
+                position={'relative'}
+                top={0}
+                left={0}
+                as={'h2'}
+                color={color}
+                fontSize={'32px'}
+                lineHeight={'42px'}
+                fontFamily={`'Prata', serif`}
+            >
+                Выбранные темы:
+            </Heading>
             {hashTags.filter((item) => {
                  if (item.isActive) { return item}
             }).map((item, index) =>

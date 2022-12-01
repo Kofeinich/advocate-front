@@ -19,7 +19,7 @@ export const Layout = ({children, isMain}) => {
                     ? <Header/> : <PracticeHeader/>
             }
             <Container>{children}</Container>
-            {/*<Footer />*/}
+            <Footer />
         </Flex>
     );
 }
