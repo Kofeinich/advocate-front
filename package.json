@@ -36,5 +36,8 @@
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "gatsby-plugin-smoothscroll": "^1.2.0"
   }
 }

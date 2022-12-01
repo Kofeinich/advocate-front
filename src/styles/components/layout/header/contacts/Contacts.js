@@ -51,19 +51,25 @@ export const Contacts = () => {
                 w={ isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
-               <WhatsApp width={'100%'} margin={'0'}/>
+                <a href="https://skobelkin.ru/whatsapp/79180675105?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82,+%D1%8F+%D1%81+%D1%81%D0%B0%D0%B9%D1%82%D0%B0" target="_blank" rel="external">
+                    <WhatsApp width={'100%'} margin={'0'}/>
+                </a>
             </Box>
             <Box
                 w={isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
-                <Telegram width={'100%'} margin={'0'}/>
+                <a className={'link'} href="https://tlgg.ru/konyukhov_vladimir" target="_blank" rel="external">
+                    <Telegram width={'100%'} margin={'0'}/>
+                </a>
             </Box>
             <Box
                 w={isMobile ? '34px' :'24px'}
                 m={'0 10px'}
             >
-                <Mail  width={'100%'} margin={'0'}/>
+                <a href="mailto:kvr165@mail.ru" target="_blank" rel="external">
+                    <Mail  width={'100%'} margin={'0'}/>
+                </a>
             </Box>
         </Flex>
 

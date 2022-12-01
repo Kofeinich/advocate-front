@@ -19,7 +19,7 @@ export const ContactMe = () => {
         position={'relative'}
         mt={'50px'}
     >
-        <HeadingStyled text={'Контакты'}/>
+        <HeadingStyled id={'contacts'} text={'Контакты'}/>
         <Flex
             borderBottom={isMobile ? 'none' : `1px solid ${color}`}
             borderTop={isMobile ? 'none' : `1px solid ${color}`}

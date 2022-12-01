@@ -22,24 +22,26 @@ export const ContactSocial = () => {
             alignItems={'center'}
         >
             <Phone width={'23px'} margin={'0'}/>
-            <Text
-                pl={'18px'}
-                color={color}
-                fontSize={'16px'}
-                fontFamily={'"Jost", sans-serif'}
-                _hover={{
-                    color: "#F06449",
-                    cursor: 'pointer'
-                }}
-                _active={{
-                    color: "#F06449"
-                }}
-                _focus={{
-                    color: "#F06449"
-                }}
-            >
-                +7 (918) 067-51-05
-            </Text>
+            <a href='tel:+79180675105'>
+                <Text
+                    pl={'18px'}
+                    color={color}
+                    fontSize={'16px'}
+                    fontFamily={'"Jost", sans-serif'}
+                    _hover={{
+                        color: "#F06449",
+                        cursor: 'pointer'
+                    }}
+                    _active={{
+                        color: "#F06449"
+                    }}
+                    _focus={{
+                        color: "#F06449"
+                    }}
+                >
+                    +7 (918) 067-51-05
+                </Text>
+            </a>
         </Flex>
         <Flex
             w={'100%'}
@@ -71,12 +73,18 @@ export const ContactSocial = () => {
             </Text>
         </Flex>
         <Flex
-            justify={isMobile ? 'center' :'left'}
+            justify={isMobile ? 'center' : 'left'}
             alignItems={'center'}
         >
-            <WhatsApp width={'32px'} margin={'0px 20px 0px 0px'}/>
-            <Telegram width={'32px'} margin={'0px 20px 0px 0px'}/>
-            <Mail width={'32px'} margin={'0px 20px 0px 0px'}/>
+            <a href="https://skobelkin.ru/whatsapp/79180675105?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82,+%D1%8F+%D1%81+%D1%81%D0%B0%D0%B9%D1%82%D0%B0" target="_blank" rel="external">
+                <WhatsApp width={'32px'} margin={'0px 20px 0px 0px'}/>
+            </a>
+            <a className={'link'} href="https://tlgg.ru/konyukhov_vladimir" target="_blank" rel="external">
+                <Telegram width={'32px'} margin={'0px 20px 0px 0px'}/>
+            </a>
+            <a href="mailto:kvr165@mail.ru" target="_blank" rel="external">
+                <Mail width={'32px'} margin={'0px 20px 0px 0px'}/>
+            </a>
         </Flex>
     </VStack>
 }

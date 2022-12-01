@@ -14,6 +14,7 @@ export const Header = () => {
     const bg = useColorModeValue('#F7F5FB', '#36382E')
     return (
         <Flex
+            id={'main'}
             as={'header'}
             w={'100%'}
             h={'80px'}

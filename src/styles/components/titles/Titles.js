@@ -22,7 +22,7 @@ export const Titles = () => {
         position={'relative'}
         mt={'50px'}
     >
-        <HeadingStyled text={'Моя Практика'}/>
+        <HeadingStyled id={'my-practice'} text={'Моя Практика'}/>
         {topTitles.map((item, index) =>
             <Title instance={item}/>
         )}

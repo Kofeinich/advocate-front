@@ -16,7 +16,7 @@ export const Services = () => {
         position={'relative'}
         top={'30px'}
     >
-        <HeadingStyled text={'Услуги'}/>
+        <HeadingStyled text={'Услуги'} id={'services'}/>
         {isMobile
             ?
             <MobileStack/>
