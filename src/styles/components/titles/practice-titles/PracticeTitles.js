@@ -36,7 +36,7 @@ export const PracticeTitles = ({tags}) => {
         mt={'50px'}
     >
         {listOfActiveItems.map((item, index) =>
-            <Title key={index} text={item.title} desc={item.description}/>
+            <Title key={index} instance={item}/>
         )}
     </Flex>
 }
