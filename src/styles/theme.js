@@ -1,7 +1,6 @@
 import {extendTheme} from "@chakra-ui/react"
 
 const config = {
-    initialColorMode: localStorage.getItem('chakra-ui-color-mode') || 'dark',
     useSystemColorMode: true,
 }
 const colorTheme = extendTheme({
