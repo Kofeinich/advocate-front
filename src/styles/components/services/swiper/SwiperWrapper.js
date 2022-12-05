@@ -52,8 +52,8 @@ export const SwiperWrapper = () => {
                 loop={true}
             >
                 {texts.main.service.map((item, index) =>
-                    <SwiperSlide key={index} className={'my-slide'}>
-                        <SwiperItem key={index} service={item}/>
+                    <SwiperSlide  key={index.toString()}  className={'my-slide'}>
+                        <SwiperItem key={index}  service={item}/>
                     </SwiperSlide>
                 )}
             </Swiper>

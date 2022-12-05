@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Flex, Heading, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
-import {ButtonStyled} from "../styled/ButtonStyled";
 import {People} from "./people/People";
+import {texts} from "../../../texts/texts";
 
 
 
@@ -34,15 +34,19 @@ export const PracticeDescription = () => {
             >
                 Моя Практика
             </Heading>
-            <Text
-                align={'left'}
-                color={color}
-                fontFamily={`'Jost', sans-serif`}
-                fontWeight={'400'}
-                fontSize={isMobile ? '18px' : '20px'}
-            >
-                Какой-то приятный текст о том, что тут интересного написано, и почему это важно. Он не должен быть очень большим, да он вообще никому ничего не должен. Но чтобы было красиво он должен быть сопоставим с картинкой. Имею в виду в плане габаритов.
-            </Text>
+
+            {texts.practice.description.map((item, index) =>
+                <Text
+                    key={index}
+                    align={'left'}
+                    color={color}
+                    fontFamily={`'Jost', sans-serif`}
+                    fontWeight={'400'}
+                    fontSize={isMobile ? '18px' : '20px'}
+                >
+                    {item}
+                </Text>
+            )}
         </VStack>
         <Flex
             alignItems={'center'}

@@ -2,6 +2,7 @@ import {Flex, Heading, Text, useColorModeValue, useMediaQuery, VStack} from "@ch
 import {StaticImage} from "gatsby-plugin-image";
 import * as React from 'react'
 import {ButtonStyled} from "../styled/ButtonStyled";
+import {texts} from "../../../texts/texts";
 
 
 export const Profile = () => {
@@ -23,7 +24,7 @@ export const Profile = () => {
         />
         <VStack
             alignItems="left"
-            spacing={8}
+            spacing={4}
             justify={'left'}
         >
             <Heading
@@ -47,15 +48,21 @@ export const Profile = () => {
             >
                 Владимир Конюхов
             </Heading>
-            <Text
-                color={color}
-                fontFamily={`'Jost', sans-serif`}
-                fontWeight={'400'}
-                fontSize={isMobile ? '18px' : '20px'}
-            >
-                юридическая помощь в судебных спорах, арбитражных судах, общей юрисдикции, юридическом сопровождении
-                бизнеса и защите прав граждан в суде
-            </Text>
+
+            {texts.main.description.map((item, index) =>
+                <Text
+                    margin={0}
+                    key={index}
+                    maxW={'540px'}
+                    pr={'20px'}
+                    color={color}
+                    fontFamily={`'Jost', sans-serif`}
+                    fontWeight={'400'}
+                    fontSize={isMobile ? '18px' : '20px'}
+                >
+                    {item}
+                </Text>
+            )}
             {
                 isMobile
                     ?
