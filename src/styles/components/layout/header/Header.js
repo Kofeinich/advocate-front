@@ -6,6 +6,7 @@ import {Contacts} from "./contacts/Contacts";
 import {Switcher} from "./switcher/Switcher";
 import {Navs} from "./navs/Navs";
 import {MobileHeader} from './mobile-header/MobileHeader';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 export const Header = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -14,7 +15,6 @@ export const Header = () => {
     const bg = useColorModeValue('#F7F5FB', '#36382E')
     return (
         <Flex
-            id={'main'}
             as={'header'}
             w={'100%'}
             h={'80px'}
@@ -96,10 +96,18 @@ export const Header = () => {
                             >
                                 <Logo/>
                             </Flex>
-                            <Navs text={'Услуги'}/>
-                            <Navs text={'Моя практика'}/>
-                            <Navs text={'Оставить заявку'}/>
-                            <Navs text={'Контакты'}/>
+                            <button  onClick={() => scrollTo('#service')} >
+                                <Navs text={'Услуги'}/>
+                            </button>
+                            <button  onClick={() => scrollTo('#practice')} >
+                                <Navs text={'Моя практика'}/>
+                            </button>
+                            <button  onClick={() => scrollTo('#contacs')} >
+                                <Navs text={'Оставить заявку'}/>
+                            </button>
+                            <button  onClick={() => scrollTo('#contacs')} >
+                                <Navs text={'Контакты'}/>
+                            </button>
                         </Flex>
                         <Flex
                             minW={'300px'}

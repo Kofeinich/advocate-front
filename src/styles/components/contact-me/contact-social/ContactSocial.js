@@ -1,4 +1,4 @@
-import {Box, Flex, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Flex, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
 import * as React from "react";
 
 import {Current} from "../../../icons/Current";
@@ -21,7 +21,9 @@ export const ContactSocial = () => {
             w={'100%'}
             alignItems={'center'}
         >
-            <Phone width={'23px'} margin={'0'}/>
+            <a href='tel:+79180675105'>
+                <Phone width={'23px'} margin={'0'}/>
+            </a>
             <a href='tel:+79180675105'>
                 <Text
                     pl={'18px'}

@@ -13,6 +13,7 @@ import {Contacts} from "../contacts/Contacts";
 import Logo from "../../../../../svg/logo.svg";
 import {Switcher} from "../switcher/Switcher";
 import {Navs} from "../navs/Navs";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 export const MobileHeader = ({onClose}) => {
     const bg = useColorModeValue('#F7F5FB', '#36382E')
@@ -87,10 +88,34 @@ export const MobileHeader = ({onClose}) => {
                     Меню
                 </Heading>
                 <VStack mt={'20px'} alignItems="left" spacing={3.5}>
-                    <Navs text={'Услуги'}/>
-                    <Navs text={'Моя практика'}/>
-                    <Navs text={'Оставить заявку'}/>
-                    <Navs text={'Контакты'}/>
+                    <button  onClick={() => {
+                        scrollTo('#service')
+                        onClose()
+                    }}
+                    >
+                        <Navs text={'Услуги'}/>
+                    </button>
+                    <button  onClick={() => {
+                        scrollTo('#practice')
+                        onClose()
+                    }}
+                    >
+                        <Navs text={'Моя практика'}/>
+                    </button>
+                    <button onClick={() => {
+                        scrollTo('#contacs')
+                        onClose()
+                    }}
+                    >
+                        <Navs text={'Оставить заявку'}/>
+                    </button>
+                    <button  onClick={() => {
+                        scrollTo('#contacs')
+                        onClose()
+                    }}
+                    >
+                        <Navs text={'Контакты'}/>
+                    </button>
                     <Contacts/>
                 </VStack>
             </DrawerBody>

@@ -16,12 +16,18 @@ export const Profile = () => {
         alignItems={'center'}
         maxW={'1100px'}
     >
+        <Flex
+            position={"absolute"}
+            top={'-80px'}
+            id={"hed"}
+        />
         <VStack
             alignItems="left"
             spacing={8}
             justify={'left'}
         >
             <Heading
+                id={"hed"}
                 as={'h1'}
                 fontSize={'40px'}
                 fontFamily={`'Prata', serif`}

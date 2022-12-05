@@ -11,7 +11,6 @@ import {Profile} from "../styles/components/profile/Profile";
 import {Services} from "../styles/components/services/Services";
 import {ContactMe} from "../styles/components/contact-me/ContactMe";
 
-
 const MainPage = () => {
 
     return (
