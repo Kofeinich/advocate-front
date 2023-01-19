@@ -20,7 +20,7 @@ export const AdvertingCard = ({icon, text, number}) => {
             >
                 <Text
                     textAlign={'center'}
-                    color={'#F06449'}
+                    color={color}
                     fontSize={'40px'}
                     lineHeight={'60px'}
                     fontFamily={`'Prata', serif`}

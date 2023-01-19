@@ -9,6 +9,7 @@ export const PracticeDescription = () => {
     const color = useColorModeValue('#474747', '#F7F5FB')
     const [isMobile] = useMediaQuery("(max-width: 768px)")
 
+    // noinspection JSValidateTypes
     return <Flex
         as={'section'}
         justify={isMobile ? 'center' : 'space-between'}

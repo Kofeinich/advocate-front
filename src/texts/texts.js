@@ -9,11 +9,11 @@ export const texts = {
         ],
         cards: [
             {
-                number: "> 18",
+                number: "18",
                 text: "лет практики",
             },
             {
-                number: "> 300",
+                number: "300 +",
                 text: "решенных дел",
             },
             {
