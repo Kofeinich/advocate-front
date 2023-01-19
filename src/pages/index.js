@@ -11,6 +11,7 @@ import {Profile} from "../styles/components/profile/Profile";
 import {Services} from "../styles/components/services/Services";
 import {ContactMe} from "../styles/components/contact-me/ContactMe";
 import {SEO} from "../seo/SEO";
+import {Mail} from "../styles/components/mail/Mail";
 
 const MainPage = () => {
 
@@ -31,6 +32,7 @@ const MainPage = () => {
                    <Adverting/>
                    <Services/>
                    <Titles/>
+                   <Mail/>
                    <ContactMe/>
                </Layout>
             </ColorModeProvider>
