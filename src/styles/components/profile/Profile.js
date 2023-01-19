@@ -1,4 +1,4 @@
-import {Flex, Heading, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
 import {StaticImage} from "gatsby-plugin-image";
 import * as React from 'react'
 import {ButtonStyled} from "../styled/ButtonStyled";
@@ -7,7 +7,7 @@ import {texts} from "../../../texts/texts";
 
 export const Profile = () => {
     const color = useColorModeValue('#474747', '#F7F5FB')
-    const [isMobile] = useMediaQuery("(max-width: 568px)")
+    const [isMobile] = useMediaQuery("(max-width: 1100px)")
 
     return <Flex
         as={'section'}
@@ -16,6 +16,7 @@ export const Profile = () => {
         position={'relative'}
         alignItems={'center'}
         maxW={'1100px'}
+        h={isMobile ? '' : '527px'}
     >
         <Flex
             position={"absolute"}
@@ -23,11 +24,13 @@ export const Profile = () => {
             id={"hed"}
         />
         <VStack
+            h={'510px'}
             alignItems="left"
             spacing={4}
             justify={'left'}
         >
             <Heading
+                mt={0}
                 id={"hed"}
                 as={'h1'}
                 fontSize={'40px'}
@@ -79,16 +82,15 @@ export const Profile = () => {
         <Flex
             position={'relative'}
             overflow={'hidden'}
-            pl={isMobile ? '0' : '20px'}
-            pt={isMobile ? '20px' : '0'}
+            m={isMobile ? '20px 0' : '0 0px 20px 20px'}
             w={'100%'}
-            maxW={isMobile ? '220px' : '380px'}
+            maxW={isMobile ? '220px' : '320px'}
             minW={'200px'}
             flexDirection={'column'}
             alignItems={'center'}
+            borderRadius={isMobile ? '' : '16px'}
         >
             <StaticImage
-                style={{marginBottom: '20px'}}
                 placeholder={'blurred'}
                 src={`../../../images/profile.jpeg`}
                 alt={''}
@@ -99,7 +101,11 @@ export const Profile = () => {
             {
                 isMobile
                     ?
-                    <ButtonStyled text={'Оставить заявку'}/>
+                    <Box
+                        mt={'20px'}
+                    >
+                        <ButtonStyled text={'Оставить заявку'}/>
+                    </Box>
                     :
                     <></>
             }

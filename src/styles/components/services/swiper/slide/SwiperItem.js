@@ -9,8 +9,8 @@ export const SwiperItem = ({service}) => {
 
     return <Box
         position={'relative'}
-        w={'274px'}
-        h={isMobile ? '' : '184px'}
+        w={'294px'}
+        h={isMobile ? '' : '214px'}
         top={'0'}
         m={'0'}
         borderRight={`1px solid ${color} `}
