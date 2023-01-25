@@ -13,6 +13,7 @@ import {texts} from "../../../../texts/texts"
 import {ArrowLeft} from "../../../icons/ArrowLeft";
 import {ArrowRight} from "../../../icons/ArrowRight";
 import {useCallback, useRef} from "react";
+import {Link} from "gatsby";
 
 
 export const SwiperWrapper = () => {
@@ -108,18 +109,24 @@ export const SwiperWrapper = () => {
                 justify={'right'}
                 w={'200px'}
             >
-                <Text
-                    _hover={{
-                        cursor: 'pointer',
-                        color: '#F06449'
-                    }}
-                >
-                    Подробнее
-                </Text>
-                <ArrowRight
-                    width={'45px'}
-                    margin={'0px 0px 0px 20px'}
-                />
+
+                <Link to='/prices'>
+                    <Text
+                        _hover={{
+                            cursor: 'pointer',
+                            color: '#F06449'
+                        }}
+                    >
+                        Подробнее
+                    </Text>
+                </Link>
+
+                <Link to='/prices'>
+                    <ArrowRight
+                        width={'45px'}
+                        margin={'0px 0px 0px 20px'}
+                    />
+                </Link>
             </Flex>
         </Flex>
     </>

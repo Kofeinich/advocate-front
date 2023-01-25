@@ -1,10 +1,10 @@
 import * as React from 'react'
-import {Flex, useColorModeValue} from "@chakra-ui/react";
+import {Flex, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 
 
 export const Container = ({children}) => {
     const color = useColorModeValue( '#F7F5FB', '#36382E')
-
+    const [isMobile] = useMediaQuery("(max-width: 768px)")
     return (
         <Flex
             as={'main'}
@@ -12,7 +12,7 @@ export const Container = ({children}) => {
             flexGrow={1}
             flexDirection={'column'}
             position={'relative'}
-            p={'20px'}
+            p={isMobile ? '10px':'20px'}
             left={0}
             top={'80px'}
             alignItems={'center'}

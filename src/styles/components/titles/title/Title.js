@@ -31,12 +31,17 @@ export const Title = ({instance}) => {
                 borderBottom={isOpen ? 'none' : `1px solid ${color}`}
             >
                 <Heading
+                    _hover={{
+                        cursor: 'pointer',
+                        color: "#F06449"
+                    }}
                     lineHeight={'30px'}
                     fontSize={isMobile ? '16px' : '20px'}
                     fontWeight={'400'}
                     as={'h3'}
                     fontFamily={`'Jost', sans-serif`}
                     color={color}
+                    onClick={() => clickHandler()}
                 >
                     {instance.description}
                 </Heading>

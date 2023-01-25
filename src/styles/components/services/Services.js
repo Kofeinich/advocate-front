@@ -5,6 +5,7 @@ import 'swiper/css';
 import {SwiperWrapper} from "./swiper/SwiperWrapper";
 import {MobileStack} from "./swiper/MobileStack";
 import {ArrowRight} from "../../icons/ArrowRight";
+import {Link} from "gatsby";
 
 export const Services = () => {
     const [isMobile] = useMediaQuery("(max-width: 1050px)")
@@ -35,18 +36,23 @@ export const Services = () => {
                     w={'100%'}
                     mb={'30px'}
                 >
-                    <Text
-                        _hover={{
-                            cursor: 'pointer',
-                            color: '#F06449'
-                        }}
-                    >
-                        Подробнее
-                    </Text>
-                    <ArrowRight
-                        width={'45px'}
-                        margin={'0px 0px 0px 20px'}
-                    />
+
+                    <Link to='/prices'>
+                        <Text
+                            _hover={{
+                                cursor: 'pointer',
+                                color: '#F06449'
+                            }}
+                        >
+                            Подробнее
+                        </Text>
+                    </Link>
+                    <Link to='/prices'>
+                        <ArrowRight
+                            width={'45px'}
+                            margin={'0px 0px 0px 20px'}
+                        />
+                    </Link>
                 </Flex>
             </>
             :
