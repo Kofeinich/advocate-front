@@ -1,7 +1,8 @@
-import { useColorModeValue, VStack} from "@chakra-ui/react";
+import {Flex, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {texts} from "../../../../texts/texts";
 import {SwiperItem} from "./slide/SwiperItem";
 import * as React from "react";
+import {ArrowRight} from "../../../icons/ArrowRight";
 
 export const MobileStack = () => {
     const color = useColorModeValue('#474747', '#F7F5FB')
@@ -12,7 +13,7 @@ export const MobileStack = () => {
         justify={'center'}
         w={'100%'}
         maxW={'1120px'}
-        m={'70px 0px'}
+        m={'70px 0px 20px 0px'}
         position={'relative'}
         spacing={8}
         borderTop={`1px solid ${color}`}

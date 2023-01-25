@@ -52,5 +52,13 @@ module.exports = {
                 isUsingColorMode: true,
             },
         },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                "name": "images",
+                "path": `${__dirname}/src/images`
+            },
+            __key: "images"
+        }
     ],
 }

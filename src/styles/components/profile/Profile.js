@@ -1,13 +1,41 @@
 import {Box, Flex, Heading, Text, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
-import {StaticImage} from "gatsby-plugin-image";
+import Img from "gatsby-image"
 import * as React from 'react'
 import {ButtonStyled} from "../styled/ButtonStyled";
 import {texts} from "../../../texts/texts";
+import {graphql, useStaticQuery} from "gatsby";
 
 
 export const Profile = () => {
     const color = useColorModeValue('#474747', '#F7F5FB')
     const [isMobile] = useMediaQuery("(max-width: 1100px)")
+    const data = useStaticQuery(graphql`
+    query {
+      mobileLamps: file(relativePath: { eq: "profile/profile-mobile.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      desktopLamps: file(relativePath: { eq: "profile/profile.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+    const lamps = [
+        data.mobileLamps.childImageSharp.fluid,
+        {
+            ...data.desktopLamps.childImageSharp.fluid,
+            media: `(min-width: 1100px)`,
+        },
+    ]
+
 
     return <Flex
         as={'section'}
@@ -15,7 +43,8 @@ export const Profile = () => {
         flexDirection={isMobile ? 'column' : 'row'}
         position={'relative'}
         alignItems={'center'}
-        maxW={'1100px'}
+        w={'100%'}
+        maxW={'1000px'}
         h={isMobile ? '' : '527px'}
     >
         <Flex
@@ -24,7 +53,7 @@ export const Profile = () => {
             id={"hed"}
         />
         <VStack
-            h={'510px'}
+            h={isMobile ? '' : '510px'}
             alignItems="left"
             spacing={4}
             justify={'left'}
@@ -79,25 +108,31 @@ export const Profile = () => {
                     </Flex>
             }
         </VStack>
+        {/*<Img*/}
+        {/*    style={{width: '100%'}}*/}
+        {/*    loading={'lazy'}*/}
+        {/*    fluid={lamps}*/}
+        {/*    alt="Lamps Background"*/}
+        {/*/>*/}
         <Flex
-            position={'relative'}
-            overflow={'hidden'}
+            // position={'relative'}
+            // overflow={'hidden'}
             m={isMobile ? '20px 0' : '0 0px 20px 20px'}
             w={'100%'}
-            maxW={isMobile ? '220px' : '320px'}
-            minW={'200px'}
+            maxW={isMobile ? '220px' : '407px'}
+            minW={'120px'}
             flexDirection={'column'}
             alignItems={'center'}
-            borderRadius={isMobile ? '' : '16px'}
         >
-            <StaticImage
-                placeholder={'blurred'}
-                src={`../../../images/profile.jpeg`}
-                alt={''}
-                formats={['auto', 'webp', 'avif']}
-                quality={100}
-            >
-            </StaticImage>
+            <Img
+                style={{
+                    borderRadius: `16px`,
+                    width: '100%'
+                }}
+                loading={'lazy'}
+                fluid={lamps}
+                alt="Lamps Background"
+            />
             {
                 isMobile
                     ?

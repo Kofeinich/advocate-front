@@ -1,12 +1,12 @@
 .my-slide {
     display: flex;
     width: 274px;
-    height: 224px;
+    height: 304px;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
 
 .my-slider {
-    height: 224px;
+    height: 304px;
 }

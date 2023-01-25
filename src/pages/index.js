@@ -32,7 +32,7 @@ const MainPage = () => {
                    <Adverting/>
                    <Services/>
                    <Titles/>
-                   <Mail/>
+                   {/*<Mail/>*/}
                    <ContactMe/>
                </Layout>
             </ColorModeProvider>

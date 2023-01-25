@@ -1,6 +1,6 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import * as React from "react";
-import {Box, Button, Flex, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
+import {Box, Text, Flex, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {Navigation, Pagination, Scrollbar, A11y, Autoplay, Keyboard} from 'swiper';
 
 
@@ -79,24 +79,48 @@ export const SwiperWrapper = () => {
             }
         </Box>
         <Flex
-            justify={'center'}
+            justify={'space-between'}
             mb={'50px'}
+            p={'0px 50px'}
         >
-            <div
-                onClick={prevSlide}
+            <Flex w={'200px'}></Flex>
+            <Flex
+                justify={'center'}
+                w={'200px'}
             >
-                <ArrowLeft
-                    width={'50px'}
-                    margin={'0px 0px 0px 20px'}/>
-            </div>
-            <div
-                onClick={nextSlide}
+                <div
+                    onClick={prevSlide}
+                >
+                    <ArrowLeft
+                        width={'50px'}
+                        margin={'0px 20px 0px 0px'}/>
+                </div>
+                <div
+                    onClick={nextSlide}
+                >
+                    <ArrowRight
+                        width={'50px'}
+                        margin={'0px 0px 0px 20px'}
+                    />
+                </div>
+            </Flex>
+            <Flex
+                justify={'right'}
+                w={'200px'}
             >
+                <Text
+                    _hover={{
+                        cursor: 'pointer',
+                        color: '#F06449'
+                    }}
+                >
+                    Подробнее
+                </Text>
                 <ArrowRight
-                    width={'50px'}
+                    width={'45px'}
                     margin={'0px 0px 0px 20px'}
                 />
-            </div>
+            </Flex>
         </Flex>
     </>
 }

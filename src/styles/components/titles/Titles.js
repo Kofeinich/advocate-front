@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Flex, Text} from "@chakra-ui/react";
+import {Flex, Text, useMediaQuery} from "@chakra-ui/react";
 import {Title} from "./title/Title";
 import {HeadingStyled} from "../styled/HeadingStyled";
 import {ArrowRight} from "../../icons/ArrowRight";
@@ -7,7 +7,7 @@ import {Link} from "gatsby";
 import {texts} from "../../../texts/texts";
 
 export const Titles = () => {
-
+    const [isMobile] = useMediaQuery("(max-width: 1050px)")
     const topTitles = []
     topTitles.push(texts.practice.titles[0])
     topTitles.push(texts.practice.titles[1])
@@ -36,7 +36,7 @@ export const Titles = () => {
             mt={'60px'}
             w={'100%'}
             justify={'right'}
-            pr={'50px'}
+            pr={isMobile ? '' : '50px'}
         >
             <Link to='/practice'>
                 <Text

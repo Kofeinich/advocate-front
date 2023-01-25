@@ -1,9 +1,10 @@
 import * as React from 'react'
-import {Flex, useMediaQuery} from "@chakra-ui/react";
+import {Flex, Text, useMediaQuery} from "@chakra-ui/react";
 import {HeadingStyled} from "../styled/HeadingStyled";
 import 'swiper/css';
 import {SwiperWrapper} from "./swiper/SwiperWrapper";
 import {MobileStack} from "./swiper/MobileStack";
+import {ArrowRight} from "../../icons/ArrowRight";
 
 export const Services = () => {
     const [isMobile] = useMediaQuery("(max-width: 1050px)")
@@ -26,7 +27,28 @@ export const Services = () => {
         <HeadingStyled text={'Услуги'} id={'services'}/>
         {isMobile
             ?
-            <MobileStack/>
+            <>
+                <MobileStack/>
+                <Flex
+                    p={0}
+                    justify={'right'}
+                    w={'100%'}
+                    mb={'30px'}
+                >
+                    <Text
+                        _hover={{
+                            cursor: 'pointer',
+                            color: '#F06449'
+                        }}
+                    >
+                        Подробнее
+                    </Text>
+                    <ArrowRight
+                        width={'45px'}
+                        margin={'0px 0px 0px 20px'}
+                    />
+                </Flex>
+            </>
             :
             <SwiperWrapper/>
         }
