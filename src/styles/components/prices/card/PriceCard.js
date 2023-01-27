@@ -1,5 +1,7 @@
 import {Heading, Text, Flex, useColorModeValue, useMediaQuery, VStack} from "@chakra-ui/react";
 import * as React from 'react'
+import {Link} from "gatsby";
+import {ArrowRight} from "../../../icons/ArrowRight";
 
 
 export const PriceCard = ({item}) => {
@@ -49,6 +51,27 @@ export const PriceCard = ({item}) => {
                     </Text>
                 </Flex>
             })}
+            <Flex
+                justify={'right'}
+            >
+                <Link to='/practice'>
+                    <Text
+                        _hover={{
+                            cursor: 'pointer',
+                            color: '#F06449'
+                        }}
+                    >
+                        Смотреть судебную практику
+                    </Text>
+                </Link>
+
+                <Link to='/practice'>
+                    <ArrowRight
+                        width={'45px'}
+                        margin={'0px 0px 0px 20px'}
+                    />
+                </Link>
+            </Flex>
         </VStack>
     )
 }

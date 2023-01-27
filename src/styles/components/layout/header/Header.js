@@ -7,6 +7,7 @@ import {Switcher} from "./switcher/Switcher";
 import {Navs} from "./navs/Navs";
 import {MobileHeader} from './mobile-header/MobileHeader';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import {Link} from "gatsby";
 
 export const Header = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -108,6 +109,9 @@ export const Header = () => {
                             <button  onClick={() => scrollTo('#contacs')} >
                                 <Navs text={'Контакты'}/>
                             </button>
+                            <Link to='/prices'>
+                                <Navs text={'Цены'}></Navs>
+                            </Link>
                         </Flex>
                         <Flex
                             minW={'300px'}

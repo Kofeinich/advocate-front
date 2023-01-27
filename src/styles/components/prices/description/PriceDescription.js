@@ -49,7 +49,7 @@ export const PriceDescription = ({item}) => {
             w={'100%'}
             maxW={'620px'}
             minW={'320px'}
-            p={'30px'}
+            p={isMobile ? '10px' : '30px'}
         >
             <PriceSvg color={color}/>
         </Flex>

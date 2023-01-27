@@ -10,7 +10,7 @@ export const SwiperItem = ({service}) => {
 
     return <Box
         position={'relative'}
-        w={'304px'}
+        w={'284px'}
         h={isMobile ? '' : '100%'}
         top={'0'}
         m={'0'}
@@ -66,6 +66,6 @@ export const SwiperItem = ({service}) => {
                 )
             }
         </Box>
-        <Banner price='от 3000 ₽ '/>
+        {/*<Banner price='от 3000 ₽ '/>*/}
     </Box>
 }

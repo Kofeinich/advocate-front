@@ -14,6 +14,7 @@ import Logo from "../../../../../svg/logo.svg";
 import {Switcher} from "../switcher/Switcher";
 import {Navs} from "../navs/Navs";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import {Link} from "gatsby";
 
 export const MobileHeader = ({onClose}) => {
     const bg = useColorModeValue('#F7F5FB', '#36382E')
@@ -116,6 +117,9 @@ export const MobileHeader = ({onClose}) => {
                     >
                         <Navs text={'Контакты'}/>
                     </button>
+                    <Link to='/prices'>
+                        <Navs text={'Цены'}></Navs>
+                    </Link>
                     <Contacts/>
                 </VStack>
             </DrawerBody>
